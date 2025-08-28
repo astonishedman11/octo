@@ -15,12 +15,13 @@ G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:Wait
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 G2L["1"]["ResetOnSpawn"] = false;
 
+
 -- StarterGui.ScreenGui.Frame2
 G2L["2"] = Instance.new("Frame", G2L["1"]);
 G2L["2"]["BorderSizePixel"] = 0;
 G2L["2"]["BackgroundColor3"] = Color3.fromRGB(112, 112, 112);
 G2L["2"]["Size"] = UDim2.new(0, 500, 0, 300);
-G2L["2"]["Position"] = UDim2.new(0.24046, 0, 0.20405, 0);
+G2L["2"]["Position"] = UDim2.new(0.24046, 204, 0.20405, -20);
 G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2"]["Name"] = [[Frame2]];
 
@@ -114,7 +115,7 @@ G2L["c"] = Instance.new("LocalScript", G2L["b"]);
 
 -- StarterGui.ScreenGui.Frame2.UIDragDetector
 G2L["d"] = Instance.new("UIDragDetector", G2L["2"]);
-
+G2L["d"]["DragUDim2"] = UDim2.new(0, 204, 0, -20);
 
 
 -- StarterGui.ScreenGui.Frame2.TextButton
@@ -199,8 +200,11 @@ local script = G2L["c"];
 					local character = player.Character or player.CharacterAdded:Wait()
 					local humanoid = character:WaitForChild("Humanoid")
 	
-					-- set walkspeed
-					humanoid.WalkSpeed = number
+					while true do
+                        wait(0.001)
+						humanoid.WalkSpeed = number
+					end
+					
 					
 	
 					-- optional: clear textbox
@@ -281,8 +285,10 @@ local script = G2L["11"];
 					local character = player.Character or player.CharacterAdded:Wait()
 					local humanoid = character:WaitForChild("Humanoid")
 	
-					-- set walkspeed
-					humanoid.JumpHeight = number
+					while true do
+                        wait(0.001)
+						humanoid.JumpHeight = number
+					end
 					
 	
 					-- optional: clear textbox
